@@ -1186,6 +1186,24 @@ typedef NS_ENUM(NSInteger, BRDatePickerStyle) {
     [super addPickerToView:view];
 }
 
+-(UIPickerView *)crearePicViewWithSize:(CGSize)size{
+    [self setupDateFormatter:self.pickerMode];
+    if (self.showUnitType == BRShowUnitTypeOnlyCenter) {
+        // 添加时间单位到选择器
+        [self addUnitLabel];
+    }
+    [self reloadData];
+    self.pickerView.frame = CGRectMake(0, 0, size.width, size.height);
+    return self.pickerView;
+}
+
+-(UIDatePicker *)createDatePicKerWithSize:(CGSize)size{
+    [self setupDateFormatter:self.pickerMode];
+    self.datePicker.frame = CGRectMake(0, 0, size.width, size.height);
+    [self reloadData];
+    return self.datePicker;
+}
+
 #pragma mark - 添加时间单位到选择器
 - (void)addUnitLabel {
     if (self.unitLabelArr.count > 0) {

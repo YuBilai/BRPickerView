@@ -16,8 +16,7 @@
 @property (nonatomic, strong) UIView *titleBarView;
 // 左边取消按钮
 @property (nonatomic, strong) UIButton *cancelBtn;
-// 右边确定按钮
-@property (nonatomic, strong) UIButton *doneBtn;
+
 // 中间标题
 @property (nonatomic, strong) UILabel *titleLabel;
 

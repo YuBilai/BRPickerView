@@ -148,7 +148,11 @@ typedef void (^BRDateResultBlock)(NSDate * _Nullable selectDate, NSString * _Nul
 /// 关闭选择器视图
 - (void)dismiss;
 
+///获取时间选择器视图
+-(UIDatePicker *)createDatePicKerWithSize:(CGSize)size;
 
+///获取自定义选择器视图
+-(UIPickerView *)crearePicViewWithSize:(CGSize)size;
 
 
 //================================================= 华丽的分割线 =================================================

@@ -20,6 +20,9 @@ typedef void(^BRResultBlock)(void);
 /** 选择器标题 */
 @property (nullable, nonatomic, copy) NSString *title;
 
+// 右边确定按钮
+@property (nonatomic, strong) UIButton *doneBtn;
+
 /** 是否自动选择，即滚动选择器后就执行结果回调，默认为 NO */
 @property (nonatomic, assign) BOOL isAutoSelect;
 
